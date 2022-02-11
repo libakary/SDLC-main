@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--võtab stiili faili kasutusse, peab näitama full-pathi-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>SDLC Models</title>
+</head>
+<body>
+    <!--kopeerisime webschools koodi veidi-->
+        <h2>Konspekt</h2>
+
+    <button class="accordion">Koskmudel(waterfall)</button>
+    <!--loome dropdown konspektid mudelite kohta-->
+    <!--mudel, millal esitati, mis on põhimõte, kus/mis projektides kasutatakse-->
+    <div class="panel">
+    <p>
+        Esitatud aastal 1970 Winston Royce poolt. <br>
+        Kõige vanem ja kõige rohkem kritiseeritud mudel. <br>
+        Tegevused jagatakse nii, et iga tegevus toimub jadamisi eraldi etapina. Eelmise etapi peab lõpetama enne järgmise alustamist. <br>
+        <br>Royce jagas põhietappideks:
+        
+    </p>
+    <!--lisame pildi-->
+    <img src="images/image2.1.jpeg" alt="" width=""> <!--alt on kui src pole saadaval, siis kuvab alt teksti hoopis, laius/suurus-->
+    <p>
+        Projekt on rangelt jaotatud faasideks, ei saa töö käigus eriti muuta. Parim kasutada kui nõuded on selged ja muutuvad vähe. <br>
+        Koskmudel on sobilik suurtele süsteemidele, mida arendatakse mitmes kohas korraga. Stabiilse tehnoloogia ja keskkonnaga süsteemides. <br>
+    </p>
+    </div>
+
+    <button class="accordion">Inkrementaalmudel(incremental)</button>
+    <div class="panel">
+    <p>
+        Ei ole päris eraldi mudel, pigem seeria koskmudeleid. <br>
+        Mudel on järk-järguline - muudatusi saab teha ka nendes osades, mida pole veel arendama asutud. <br>
+        <br>Inkrementaalne ja iteratiivne arendus on veidi erinevad: 
+        <li>
+            Inkrementaalses arenduses arendatakse erinevaid süsteemi osi erinevatel aegadel ja erineva kiirusega. Kui mingi osa valmis saab, integreeritakse see olemasoleva süsteemiga.
+        </li>
+        <li>
+            Iteratiivne arendus on n.ö. muutmisstrateegia, kus nähakse ette olemasolevate süsteemiosade ümbertegemine ja parandamine. Sõna "iteratiivne" rõhutab seda, et tegevused korduvad.
+        </li>
+        <br>Parim kasutada, kui süsteeminõudlused on selged, arendajad on vähekogenud ja on sobiv anda välja algelisi süsteeme.
+    </p>
+    <img src="images/image3.jpeg" alt="">
+    </div>
+
+    <button class="accordion">Prototüüpimine(prototyping)</button>
+    <div class="panel">
+    <p>
+        Prototüüp on süsteemi algne versioon, mida kasutatakse katsetamiseks ja demonstreerimiseks. <br>
+        See luuakse kiirelt ning vaid selle osa funktsionaalsusega, mida on vaja kontrollida või arendada. <br>
+    </p>
+    <img src="images/image5.jpeg" alt="">
+    <p>
+        
+    </p>
+    </div>
+
+    <button class="accordion">Spiraalmudel(spiral)</button>
+    <div class="panel">
+    <p>
+        Kombinatsioon koskmudelist ja iteratiivsest mudelist <br>
+        Kirjeldas esimesena Barry Boehm aastal 1986. <br>
+        Protsessi kulgemist kujutab spiraal, samme korratakse mitmeid kordi, kuni tulemused on rahuldavad. <br>
+        Iga kordus algab lähema eesmärgi kavandamise ja riskide hindamisega ning lõppeb eesmärgi täitmisega. <br>
+    </p>
+    <img src="images/image4.4.png" alt="">
+    <p>
+        Hea kasutada suure ja ebaselge projekti korral. Kui on lubatud prototüüp ja selle aina täiustamine.
+        Mudeli erinevus teistest on riskidega arvestamine. 
+        Täpselt sellist mudelit kasutatakse harva, kuid sellest on kasu olnud iteratiivse arenduse ja riskide olulisuse mõistmisel.
+    </p>
+    </div>
+
+    <button class="accordion">(v-shape)</button>
+    <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <button class="accordion">(agile)</button>
+    <div class="panel">
+    <p>
+        levinum
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";
+        } else {
+        panel.style.display = "block";
+        }
+    });
+    }
+    </script>
+    
+</body>
+</html>
