@@ -35,28 +35,38 @@
     <div class="panel">
     <p>
         Ei ole päris eraldi mudel, pigem seeria koskmudeleid. <br>
+        Mainitud 1985.
         Mudel on järk-järguline - muudatusi saab teha ka nendes osades, mida pole veel arendama asutud. <br>
         <br>Inkrementaalne ja iteratiivne arendus on veidi erinevad: 
-        <li>
-            Inkrementaalses arenduses arendatakse erinevaid süsteemi osi erinevatel aegadel ja erineva kiirusega. Kui mingi osa valmis saab, integreeritakse see olemasoleva süsteemiga.
-        </li>
-        <li>
-            Iteratiivne arendus on n.ö. muutmisstrateegia, kus nähakse ette olemasolevate süsteemiosade ümbertegemine ja parandamine. Sõna "iteratiivne" rõhutab seda, et tegevused korduvad.
-        </li>
-        <br>Parim kasutada, kui süsteeminõudlused on selged, arendajad on vähekogenud ja on sobiv anda välja algelisi süsteeme.
+        <ul>
+            <li>
+                Inkrementaalses arenduses arendatakse erinevaid süsteemi osi erinevatel aegadel ja erineva kiirusega. Kui mingi osa valmis saab, integreeritakse see olemasoleva süsteemiga.
+            </li>
+            <li>
+                Iteratiivne arendus on n.ö. muutmisstrateegia, kus nähakse ette olemasolevate süsteemiosade ümbertegemine ja parandamine. Sõna "iteratiivne" rõhutab seda, et tegevused korduvad.
+            </li>
+        </ul>
     </p>
     <img src="images/image3.jpeg" alt="">
+    <p>
+        Parim kasutada, kui süsteeminõudlused on selged, arendajad on vähekogenud ja on sobiv anda välja algelisi süsteeme.
+        <br>Näiteks veebilehekülgede ja tootebaasil firmade puhul.
+    </p>
     </div>
 
     <button class="accordion">Prototüüpimine(prototyping)</button>
     <div class="panel">
     <p>
+        Esitatud 1970ndatel, sellest peale arenduses. <br>
         Prototüüp on süsteemi algne versioon, mida kasutatakse katsetamiseks ja demonstreerimiseks. <br>
         See luuakse kiirelt ning vaid selle osa funktsionaalsusega, mida on vaja kontrollida või arendada. <br>
     </p>
     <img src="images/image5.jpeg" alt="">
     <p>
-        
+        Oluline on, et prototüüp saaks loodud kiiresti, kasutades selleks abivahendeid.
+        <br>Ei pea sisaldama kogu funktsionaalsust, vaid keskenduma sellele, millest ei ole hästi aru saadud. Ei pea sisaldama vigade kontrolli.
+        <br>Prototüüpimisi võib teha ka erineval põhimõttel: ühekordne(peale loomist likvideerida), evolutsiooniline, lisanduv prototüüpimine.
+        <br>Hea kasutada, kui on võimalik luua mitmeid osalisi testiprojekte, süsteemides kus on kasutajategevus oluline.
     </p>
     </div>
 
@@ -76,18 +86,51 @@
     </p>
     </div>
 
-    <button class="accordion">(v-shape)</button>
-    <div class="panel">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <button class="accordion">(agile)</button>
+    <button class="accordion">V-mudel(v-shape)</button>
     <div class="panel">
     <p>
-        levinum
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <br>Kosemudeli probleem on see, et vead leitakse alles tsükli lõpus, mis tähendab need said protsessi käigus kuhjuda.
+        <br>Mida varem tsüklis viga leitakse, seda lihtsam ja odavam on seda parandada.
+        <br>
+        <br>V-mudel on kõrge distsipliiniga mudel, kus on arendusega paralleelne vastav testimisfaas. Versioon Koskmudelist.
+        <br>Teatud kui Validatsiooni või Verifikatsiooni mudel.
+    </p>
+    <img src="images/052715_0904_GuidetoSDLC3.png" alt="">
+    <p>
+        Vasakul on SDLC ehk arendusfaas. Paremal on STLC ehk testimisfaas.
+    </p>
     </div>
 
+    <button class="accordion">Agiilne(agile)</button>
+    <div class="panel">
+    <p>
+        Agiilsete arendusmeetodite jaoks sobib kasutada inkrementaaset mudelit.
+        <br>Agiilse tarkvaraarenduse levimise algus on aastas 2001, kui kirjutati alla "The Agile Manifesto"-le.
+        <br>Selles rõhutakse inimesele ja inimeste vahelisele suhtlemisele:
+        <ul>
+            <li>
+                Inimesed ja suhtlemine on olulisemad kui protsessid ja tööriistad.
+            </li>
+            <li>
+                Töötav tarkvara on tähtsam kui dokumentatsioon.
+            </li>
+            <li>
+                Koostöö kliendiga on tähtsam kui läbirääkimised lepingu üle.
+            </li>
+            <li>
+                Muudatussoovidele vastutulek on tähtsam kui plaani järgimine.
+            </li>
+        </ul>
+        Pigem toetutakse tagasiside käigus saadud infole kui loodetakse hoolika etteplaneerimise tehnikale.
+        <br>Raske plaanida, millal mingi funktsioon valmis saab, aga töö toimub palju kiiremini võrreldes teiste mudelitega.
+        <br>Tuntumad ja levinumad agiilsed arendusmeetodid on ekstreemprogrammeerimine (XP), Scrum, Feature Driven Development (FDD), Open Unified Process (OpenUP) jt.
+    </p>
+    <img src="images/agile_Processesv1_2.png" alt="">
+    <p>
+        Parem väikestes tiimides.
+    </p>
+
+    </div>
     <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
