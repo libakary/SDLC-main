@@ -1,0 +1,225 @@
+<!--uus element-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /*saab teha tabeli ümber jooned css style abil */
+        td,
+        th {
+            border: 1px solid black;
+            padding: 0.5rem;
+            /*teeb kasti suuremaks*/
+        }
+
+        th {
+            color: #fefefe;
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Colors Database</h2>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open ERD</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Colors ERD</h3>
+            <img style="width: 300px" src="../img/2.png" alt="Colors ERD">
+            <!--kirjeldada andmebaasi tabelit-->
+            <h3>ERD Description</h3>
+
+            <h4>Table PrimaryColor</h4>
+            <ul>
+                <li>Tabel on põhivärvide nimekiri.</li>
+                <li>Id on primaarvõti mille järgi värve saab leida, PrimaryColorName on vastav primaarvärvi nimi.</li>
+                <li>Ei ole seoseid teiste tabelitega, on vaid tabeli enda Primary key.</li>
+            </ul>
+
+            <h4>Table Shades</h4>
+            <ul>
+                <li>Tabel on sekundaarvärvide nimekiri, mis viitab teisele tabelile, et näidata, mis on kindla värvi primaarosa.</li>
+                <li>Id on primaarvõti, PrimaryColorId on võõrvõti, ColorName on sekundaarvärvi nimi.</li>
+                <li>On ühendatud PrimaryColor tabeliga, mis on siin võõrvõti, et saaks vaadata teise tabeli järgi, mis primaarvärv vastab sekundaarvärvile.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!--teeme andmebaasi tabelid-->
+    <h4>PrimaryColor</h4>
+
+    <table>
+        <!--read(table row)-->
+        <tr>
+            <!--rea sees veerud(table header)-->
+            <th>Id</th>
+            <th>PrimaryColorName</th>
+        </tr>
+        <tr>
+            <!--rea sees veerud(table d?)-->
+            <td>1</td>
+            <td>Red</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Blue</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Yellow</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Green</td>
+        </tr>
+    </table>
+
+    <h4>Shades</h4>
+    <table>
+        <!--read(table row)-->
+        <tr>
+            <!--rea sees veerud(table header)-->
+            <th>Id</th>
+            <th>PrimaryColorId</th>
+            <th>ColorName</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>Azure</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>Lemon</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>2</td>
+            <td>Cyan</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>1</td>
+            <td>Salmon pink</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>3</td>
+            <td>Mustard</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>4</td>
+            <td>Honeydew</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>4</td>
+            <td>Jungle Green</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>1</td>
+            <td>Crimson</td>
+        </tr>
+        
+    </table>
+
+    <footer style="text-align: center; margin-top: 5rem;">
+        Copyright 2022 &#169 K. K.
+    </footer>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
